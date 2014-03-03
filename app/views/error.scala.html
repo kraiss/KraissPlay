@@ -1,0 +1,19 @@
+@(page: String, lang: String)
+
+@template(page, lang) {
+
+<article class="EN">
+  <h2>Error 404 - File Not Found</h2>
+  <p>It's looking like you may have taken a wrong turn. Don't worry, someone is fixing the problem.</p>
+  <img alt="" title="Someone is fixing the problem" src='@routes.Assets.at("img/error.png")' />
+  <p>You can get back on the right track by returning to the <a title="Homepage" href="homepage/en">homepage</a></p>
+</article>
+
+<article class="FR">
+    <h2>Erreur 404 - Fichier Non Trouvé</h2>
+    <p>Il semblerait que vous vous soyez trompé de direction. Ne vous inquiétez pas, quelqu'un tente de règler le problème.</p>
+    <img alt="" title="Someone is fixing the problem" src='@routes.Assets.at("img/error.png")' />
+    <p>Vous pouvez retrouver votre chemin en retournant sur la <a title="Accueil" href="homepage/fr">page d'accueil</a></p>
+</article>    
+
+}

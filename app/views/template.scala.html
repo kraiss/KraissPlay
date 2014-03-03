@@ -1,0 +1,75 @@
+@(page: String, lang: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@page</title>
+    <meta name="keywords" content="kraiss, Kraiss, Rassat, Pierrick, Rassat Pierrick" />
+    <meta name="description" content="Kraiss's Server" />
+    
+    <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("img/icon.png")'>
+    <link rel="stylesheet" href='@routes.Assets.at("css/bootstrap.css")' type="text/css" media="screen" />
+    <link rel="stylesheet" href='@routes.Assets.at("css/main.css")' type="text/css" media="screen" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+    <script type='text/javascript' src='@routes.Assets.at("js/bootstrap.js")'></script>
+    
+    @if(lang == "fr") {
+        <style type="text/css">
+          .EN {display:none !important;}
+          .FR {}
+        </style>
+    } else {
+        <style type="text/css">
+          .FR {display:none !important;}
+          .EN {}
+        </style>  
+    }
+</head>
+<body>
+<div id="wrap">
+    <div class="container">
+        <div class="navbar navbar-default">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    @if(page == "homepage") {<li class="active">} else {<li>}
+                        <a href="/homepage/fr" class="FR"><span class="navicon navicon-home" title="Accueil"></span></a>
+                        <a href="/homepage/en" class="EN"><span class="navicon navicon-home" title="Homepage"></span></a>
+                    </li>
+                    @if(page == "notebook") {<li class="active">} else {<li>}
+                        <a href="/notebook/fr" class="FR"><span class="navicon navicon-note" title="Bloc Note"></span></a>
+                        <a href="/notebook/en" class="EN"><span class="navicon navicon-note" title="Notebook"></span></a>
+                    </li>
+                    @if(page == "contact") {<li class="active">} else {<li>}
+                        <a href="/contact/@lang"><span class="navicon navicon-contact" title="Contact"></span></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="EN"><a class="" href="/@page/fr"><span class="navlang navlang-en" title="Voir le site en francais"></span></a></li>
+                    <li class="FR"><a class="" href="/@page/en"><span class="navlang navlang-fr" title="See the website in English"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <div class="content-box">
+                    @content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row footer">
+            <p>kraiss.no-ip.org - Copyright 2014 - All Rigths Reserved - Last Update on 21/02/2014</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
