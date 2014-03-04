@@ -3,10 +3,13 @@
 # ~~~~
 
 GET     /                           controllers.Application.index()
-GET     /homepage/:lang             controllers.Application.homepage(lang: String)
-GET     /error/:lang                controllers.Application.error(lang: String)
-GET     /notebook/:lang             controllers.Application.notebook(lang: String)
-GET     /contact/:lang              controllers.Application.contact(lang: String)
+GET     /homepage                   controllers.Application.homepage()
+GET     /error                      controllers.Application.error()
+GET     /notebook                   controllers.Application.notebook()
+GET     /contact                    controllers.Application.contact()
+
+GET     /lang/get                   controllers.Application.getLang()
+GET     /lang/switch                controllers.Application.switchLang()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
