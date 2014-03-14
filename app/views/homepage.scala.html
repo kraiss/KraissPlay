@@ -2,13 +2,13 @@
 
 @template(page) {
 
-<article ng-class="showEN()">
+<article ng-show="showEN()">
     <h2>Who am I ?</h2>
     <img alt="" src='@routes.Assets.at("img/kraiss.jpg")' />
     <p>My name is Rassat Pierrick (alias Kraiss). I am a fifth year student at <a title="IMAG" href="http://ufrima.imag.fr">IMAG</a> in Computer Science.<p></p>
 </article>
 	
-<article ng-class="showFR()">
+<article ng-show="showFR()">
     <h2>Qui suis-je ?</h2>
     <img alt="" src='@routes.Assets.at("img/kraiss.jpg")' />
 	<p>Je m'appelle Rassat Pierrick (alias Kraiss). Je suis actuellement ma cinquième année d'étude en informatique à l'<a title="IMAG" href="http://ufrima.imag.fr">IMAG</a> dans la filière M2P GI.</p>

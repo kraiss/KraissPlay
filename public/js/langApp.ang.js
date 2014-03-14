@@ -18,17 +18,17 @@ langApp.controller('LangCtrl', function ($scope, $http) {
   
   $scope.showFR = function() {
       if (lang === 'fr') {
-          return "";
+          return true;
       } else {
-          return "hidden";
+          return false;
       }
   }
   
   $scope.showEN = function() {
       if (lang === 'en') {
-          return "";
+          return true;
       } else {
-          return "hidden";
+          return false;
       }
   }
 });
