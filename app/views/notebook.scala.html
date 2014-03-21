@@ -2,6 +2,22 @@
 
 @template(page) {
 
-    <p ng-show="showEN()">If you want to post a message for me</p>
+<article ng-show="showEN()">
+    <h2 class="article-title">NoteBook</h2>
+	<div class="article-content-withimage">
+		<p>
+		My name is Pierrick Rassat (alias Kraiss). I am a fifth year student in Computer Science 
+		at <a tip="IMAG Website" href="http://ufrima.imag.fr">IMAG</a> in the <em>Master II Pro - 
+		Génie Informatique</em> course. I achieve an apprenticeship as software development engineer
+		for Ticks (<a tip="Actoll Website" href="http://www.actoll.com/">Actoll</a> R&amp;D branch) 
+		under the supervision of Bruce Mariage (Project Manager - Actoll) and the consultant 
+		Danielle Ziebelin (Researcher - LIG).
+		</p>
+	</div>
+	<div class="article-image">
+		<img class="image-border" alt="" src='@routes.Assets.at("img/kraiss.jpg")' />
+	</div>
+	<span class="clear-image-layout" />
+</article>
 
 }

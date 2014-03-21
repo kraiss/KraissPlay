@@ -1,0 +1,73 @@
+@GET
+    @Path("/populate")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String populate(){
+        Element racine;
+        SAXBuilder sxb = new SAXBuilder();
+        Document document = null;
+        try {
+           //On crée un nouveau document JDOM avec en argument le fichier XML
+           //Le parsing est terminé ;)
+           document = sxb.build(new URL("http://localhost:8080/assets/data/listeProduit.xml"));
+        } catch(Exception e){
+            System.out.println(e);
+        }
+      
+        /*
+         * Lecture du fichier XML
+         */
+        
+        //On initialise un nouvel élément racine avec l'élément racine du document.
+        racine = document.getRootElement();
+        
+        List productList = racine.getChildren("product");
+        //On crée un Iterator sur notre liste
+        Iterator i = productList.iterator();
+        while(i.hasNext())
+        {
+           //On recrée l'Element courant à chaque tour de boucle afin de
+           //pouvoir utiliser les méthodes propres aux Element comme :
+           //sélectionner un nœud fils, modifier du texte, etc...
+           Element courant = (Element)i.next();
+           //récupérer information sur les produits
+           String nom = courant.getChild("nom").getText();
+           String marque = courant.getChild("marque").getText();
+           String description = courant.getChild("description").getText().replace("'", "\'");
+           if(courant.getAttributeValue("typeP").equals("tampon")){
+               Boolean appli = courant.getChild("applicateur").getText().equals("true");
+               
+               List listFlux = courant.getChild("listeFlux").getChildren("flux");
+                //On crée un Iterator sur notre liste
+                Iterator j = listFlux.iterator();
+                while (j.hasNext()) {
+                    //On recrée l'Element courant à chaque tour de boucle afin de
+                    //pouvoir utiliser les méthodes propres aux Element comme :
+                    //sélectionner un nœud fils, modifier du texte, etc...
+                    Element c = (Element) j.next();
+                    Float fluxC = Float.parseFloat(c.getChild("name").getText());
+                    Float prix = Float.parseFloat(c.getChildText("prix"));
+                    String pict = c.getChildText("img");
+                    Product newT = new Tampon(appli, nom, "tampon", prix, fluxC, description, marque, pict);
+                    productBean.addProduct(newT);
+                }
+            } else {
+                String typeS = courant.getChild("type").getText();
+                List listFlux = courant.getChild("listeFlux").getChildren("flux");
+                //On crée un Iterator sur notre liste
+                Iterator j = listFlux.iterator();
+                while (j.hasNext()) {
+                    //On recrée l'Element courant à chaque tour de boucle afin de
+                    //pouvoir utiliser les méthodes propres aux Element comme :
+                    //sélectionner un nœud fils, modifier du texte, etc...
+                    Element c = (Element) j.next();
+                    Float fluxC = Float.parseFloat(c.getChild("name").getText());
+                    Float prix = Float.parseFloat(c.getChildText("prix"));
+                    String pict = c.getChildText("img");
+                    Product newT = new Napkin(typeS, nom, "serviette", prix, fluxC, description, marque, pict);
+                    productBean.addProduct(newT);
+                }
+             }
+        }
+        
+        return "populate";
+    }

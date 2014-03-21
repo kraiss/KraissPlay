@@ -3,17 +3,22 @@
 @template(page) {
       	
 <article class="">
-   <h2>Contact</h2>
-   <img alt="" src='@routes.Assets.at("img/qrcode.png")' title="" />
-   <p> 
-   	 Rassat.Pierrick@@gmail.com<br/>
-     Mobile : +33 6 26 38 53 34<br/>
-   </p>
-   <p> 
-     Rassat Pierrick<br/>
-     4 rue Jean Richard Bloch<br/>
-     38400 Saint Martin D'Heres, FRANCE<br/>
-   </p>
+    <h2 class="article-title">Contact</h2>
+	<div class="article-content-withimage">
+		<p> 
+			Rassat.Pierrick@@gmail.com<br/>
+			Mobile : +33 6 26 38 53 34<br/>
+		</p>
+		<p> 
+			Rassat Pierrick<br/>
+			6 rue Colonel Manhes<br/>
+			38400 Saint Martin D'Heres, FRANCE<br/>
+		</p>
+	</div>
+	<div class="article-image">
+		<img class="image-border" alt="" src='@routes.Assets.at("img/qrcode.png")'/>
+	</div>
+	<span class="clear-image-layout"/>
 </article>
 
 }
