@@ -16,3 +16,6 @@ dist
 /RUNNING_PID
 /.settings
 /project/*-shim.sbt
+
+activator-sbt-echo-play-shim.sbt
+activator-sbt-atmos-akka-shim.sbt
