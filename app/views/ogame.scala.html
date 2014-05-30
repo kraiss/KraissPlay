@@ -2,11 +2,13 @@
 
 @template(page) {
 
-<article class="">
-    <h2 class="article-title">Résumé et Liens</h2>
-	<div class="article-content">
-        Salut à vous amis pirates, ici Kraiss, <br>
-        J'ai épluché toutes les données que j'avais sur les UNSC pour que l'on soit un peu plus fixé sur ce qu'ils ont.<br>
+<article ng-controller="ogameCtrl" class="" >
+    <h2 id="Index" class="article-title">Résumé et Liens</h2>
+    <div class="article-content">
+        Salut à vous amis pirates, ici Kraiss,
+        <br><br>
+        J'ai épluché toutes les données que j'avais sur les UNSC pour que l'on soit un peu plus fixé sur ce qu'ils ont.
+        <br><br>
         Pour ceux qui ne veulent pas le détail, un petit résumé :
         <ul>
             <li>Ils sont en général plus mineur que raideur mais quelqu'un ont déjà de belles flottes </li>
@@ -14,41 +16,39 @@
         </ul>
 
         <br>
-        Leurs joueurs classé par flotte
+        <h4>Les outils que je vous conseille :</h4>
         <ul>
-            <li><a tip="Spartan S117" href="#SpartanS117">Spartan S117</a></li>
-            <li><a tip="Rasen" href="#Rasen">Rasen</a></li>
-            <li><a tip="SpartaGlobus" href="#SpartaGlobus">SpartaGlobus</a></li>
-            <li><a tip="ExO_Dus" href="#ExO_Dus">ExO_Dus</a></li>
-            <li><a tip="Thel Vadamee" href="#ThelVadamee">Thel Vadamee</a></li>
-            <li><a tip="kevv" href="#kevv">kevv</a></li>
-            <li><a tip="Furious Biker" href="#FuriousBiker">Furious Biker</a></li>
-            <li><a tip="Ashtoonet" href="#Ashtoonet">Ashtoonet</a></li>
-            <li><a tip="Etwhal" href="#Etwhal">Etwhal</a></li>
-            <li><a tip="bonux44" href="#bonux44">bonux44</a></li>
-            <li><a tip="S00999" href="#S00999">S00999</a></li>
+            <li><a tip="Infuza UNSC" href="http://www.infuza.com/fr/ogame.fr/Ursa/Alliances/357066">Infuza de l'U-N-S-C</a> : Infuza est un site qui permet d'afficher les stats par semaine d'un joueur ou d'un alliance.</li>
+            <li><a tip="Cartographie" href="http://www.ogametools.com/recherche-ogame.html">Outil de Cartographie</a> : Penser completer les champs, notamment le champs 'univers'</li>
+            <li><a tip="Simulateur" href="http://www.ogametools.com/simulateur-combat.html">Simulateur de Combat</a> : Gère les attaque et defense groupée. Pour avoir les vrais cdr cliquer sur paramètre et mettre les débris de défense a 30. </li>
         </ul>
-	</div>
-</article>
 
-<article class="">
-    <h2 id="Rasen" class="article-title">Rasen</h2>
-	<div class="article-content">
+        <br>
+        <h4>Leurs joueurs classé par flotte :</h4>
+        <ol>
+            <li ng-repeat="p in player" class="">
+                <span class="ogameLbl">{{p.name}}</span>
+                - <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}">Son Infuza</a>
+                - <a ng-show="p.infoSupp" tip="Détail de {{p.name}}" ng-click="showDetail(p.id)">Voir Detail</a>
 
-        <h3>Dernières flotte connue</h3>
-        <ul>
-            <li>Petit Tr. : 1.033</li>
-            <li>Grand Tr. :  .893</li>
-            <li>Ch. Léger : 4.854</li>
-            <li>Ch. Lourd :  .868</li>
-            <li>Croiseurs :  .903</li>
-            <li>Vai. Bat. :  .750</li>
-            <li>Recycleu. :  .390</li>
-            <li>Bombardi. :  .080</li>
-            <li>Destruct. :  .091</li>
-            <li>Traqueurs :  .358</li>
-        </ul>
-	</div>
+                <div ng-show="p.showDetail" style="padding-left:20px">
+                    Sa flotte
+                    <ul>
+                        <li><span class="ogameLbl">Petit Transp :</span>{{p.fleet.small}}</li>
+                        <li><span class="ogameLbl">Grand Transp :</span>{{p.fleet.large}}</li>
+                        <li><span class="ogameLbl">Chasseur léger :</span>{{p.fleet.light}}</li>
+                        <li><span class="ogameLbl">Chasseur lourd :</span>{{p.fleet.heavy}}</li>
+                        <li><span class="ogameLbl">Croiseurs :</span>{{p.fleet.cruiser}}</li>
+                        <li><span class="ogameLbl">Vaisseau Bat :</span>{{p.fleet.battleship}}</li>
+                        <li><span class="ogameLbl">Recycleur :</span>{{p.fleet.recycler}}</li>
+                        <li><span class="ogameLbl">Bombardier :</span>{{p.fleet.bomber}}</li>
+                        <li><span class="ogameLbl">Destructeur :</span>{{p.fleet.destroyer}}</li>
+                        <li><span class="ogameLbl">Traqueur :</span>{{p.fleet.traqueur}}</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
 </article>
 
 }

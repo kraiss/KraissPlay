@@ -1,4 +1,5 @@
 @import "constants.less";
+@import "ogame.less";
 
 /* Less Functions */
 .boxShadow(){
@@ -142,6 +143,10 @@ span.navlang {
 
         .thin_border();
         .boxShadow();
+
+        h1, h2, h3, h4 {
+          color: lighten(@content_h_color, 10%);
+        }
 
         .article-title {
           text-align: justify;
