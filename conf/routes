@@ -7,6 +7,7 @@ GET     /homepage                   controllers.Application.homepage()
 GET     /error                      controllers.Application.error()
 GET     /notebook                   controllers.Application.notebook()
 GET     /contact                    controllers.Application.contact()
+GET     /ogame                      controllers.Application.ogame()
 
 GET     /lang/get                   controllers.Application.getLang()
 GET     /lang/switch                controllers.Application.switchLang()

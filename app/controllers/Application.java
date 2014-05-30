@@ -31,6 +31,10 @@ public class Application extends Controller {
         return ok(views.html.contact.render("contact"));
     }
     
+    public static Result ogame() {
+        return ok(views.html.contact.render("ogame"));
+    }
+    
     public static Result switchLang() {
         if (LANG_FR.equals(session(LANG_ATTR))){
             session(LANG_ATTR, LANG_EN);
