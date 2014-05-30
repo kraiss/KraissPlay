@@ -18,21 +18,25 @@
         <br>
         <h4>Les outils que je vous conseille :</h4>
         <ul>
-            <li><a tip="Infuza UNSC" href="http://www.infuza.com/fr/ogame.fr/Ursa/Alliances/357066">Infuza de l'U-N-S-C</a> : Infuza est un site qui permet d'afficher les stats par semaine d'un joueur ou d'un alliance.</li>
-            <li><a tip="Cartographie" href="http://www.ogametools.com/recherche-ogame.html">Outil de Cartographie</a> : Penser completer les champs, notamment le champs 'univers'</li>
-            <li><a tip="Simulateur" href="http://www.ogametools.com/simulateur-combat.html">Simulateur de Combat</a> : Gère les attaque et defense groupée. Pour avoir les vrais cdr cliquer sur paramètre et mettre les débris de défense a 30. </li>
+            <li><a tip="Infuza UNSC" href="http://www.infuza.com/fr/ogame.fr/Ursa/Alliances/357066" class="tip">Infuza de l'U-N-S-C</a> : Infuza est un site qui permet d'afficher les stats par semaine d'un joueur ou d'un alliance.</li>
+            <li><a tip="Cartographie" href="http://www.ogametools.com/recherche-ogame.html" class="tip">Outil de Cartographie</a> : Penser completer les champs, notamment le champs 'univers'</li>
+            <li><a tip="Simulateur" href="http://www.ogametools.com/simulateur-combat.html" class="tip">Simulateur de Combat</a> : Gère les attaque et defense groupée. Pour avoir les vrais cdr cliquer sur paramètre et mettre les débris de défense a 30. </li>
         </ul>
 
         <br>
         <h4>Leurs joueurs classé par flotte :</h4>
         <ol>
             <li ng-repeat="p in player" class="">
-                <span class="ogameLbl">{{p.name}}</span>
-                - <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}">Son Infuza</a>
-                - <a ng-show="p.infoSupp" tip="Détail de {{p.name}}" ng-click="showDetail(p.id)">Voir Detail</a>
+                <span class="ogameLbl">{{p.name}}</span> ({{p.rank}})
+                - <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a>
+                - <a tip="Détail de {{p.name}}" ng-click="switchDetail($index)">Voir Detail<span class="updown-link {{upDownIcon($index)}}" /></a>
 
                 <div ng-show="p.showDetail" style="padding-left:20px">
-                    Sa flotte
+                    Points de flotte : {{p.fleet.size}}k
+                    <br>
+                    Classement flotte : {{p.fleet.rank}}
+                    <br>
+                    Sa dernière flotte connue
                     <ul>
                         <li><span class="ogameLbl">Petit Transp :</span>{{p.fleet.small}}</li>
                         <li><span class="ogameLbl">Grand Transp :</span>{{p.fleet.large}}</li>

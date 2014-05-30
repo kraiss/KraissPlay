@@ -26,23 +26,23 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
                     @if(page == "homepage") {<li class="active">} else {<li>}
-                        <a href="/homepage" ng-show="showFR()"><span class="navicon navicon-home" title="Accueil"></span></a>
-                        <a href="/homepage" ng-show="showEN()"><span class="navicon navicon-home" title="Homepage"></span></a>
+                        <a href="/homepage" ng-show="showFR()"><span class="tip navicon navicon-home" title="Accueil"></span></a>
+                        <a href="/homepage" ng-show="showEN()"><span class="tip navicon navicon-home" title="Homepage"></span></a>
                     </li>
                     @if(page == "notebook") {<li class="active">} else {<li>}
-                        <a href="/notebook" ng-show="showFR()"><span class="navicon navicon-note" title="Bloc Note"></span></a>
-                        <a href="/notebook" ng-show="showEN()"><span class="navicon navicon-note" title="Notebook"></span></a>
+                        <a href="/notebook" ng-show="showFR()"><span class="tip navicon navicon-note" title="Bloc Note"></span></a>
+                        <a href="/notebook" ng-show="showEN()"><span class="tip navicon navicon-note" title="Notebook"></span></a>
                     </li>
                     @if(page == "contact") {<li class="active">} else {<li>}
-                        <a href="/contact"><span class="navicon navicon-contact" title="Contact"></span></a>
+                        <a href="/contact"><span class="tip navicon navicon-contact" title="Contact"></span></a>
                     </li>
                     @if(page == "ogame") {<li class="active">} else {<li>}
-                        <a href="/ogame"><span class="navicon navicon-bulb" title="Ogame"></span></a>
+                        <a href="/ogame"><span class="tip navicon navicon-bulb" title="Ogame"></span></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li ng-show="showEN()"><a class="" ng-click="changeLang()"><span class="navlang navlang-en" title="Voir le site en francais"></span></a></li>
-                    <li ng-show="showFR()"><a class="" ng-click="changeLang()"><span class="navlang navlang-fr" title="See the website in English"></span></a></li>
+                    <li ng-show="showEN()"><a class="pointer" ng-click="changeLang()"><span class="tip navlang navlang-en" title="Voir le site en francais"></span></a></li>
+                    <li ng-show="showFR()"><a class="pointer" ng-click="changeLang()"><span class="tip navlang navlang-fr" title="See the website in English"></span></a></li>
                 </ul>
             </div>
         </div>
