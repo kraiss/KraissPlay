@@ -32,7 +32,7 @@ public class Application extends Controller {
     }
     
     public static Result ogame() {
-        return ok(views.html.contact.render("ogame"));
+        return ok(views.html.ogame.render("ogame"));
     }
     
     public static Result switchLang() {
