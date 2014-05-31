@@ -45,10 +45,10 @@ angular
                 rank:216, holliday:false,
                 fleet: {
                     size: 107, rank:136,
-                    small:0, large:0, recycler:0,
-                    light:0, heavy:0, cruiser:0,
-                    battleship:0, destroyer:0,
-                    bomber:0, traqueur:0
+                    small:2146, large:190, recycler:108,
+                    light:1406, heavy:197, cruiser:416,
+                    battleship:468, destroyer:83,
+                    bomber:165, traqueur:160
                 }
             },
 
