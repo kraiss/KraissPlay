@@ -13,6 +13,11 @@ angular
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
@@ -22,9 +27,14 @@ angular
                 fleet: {
                     size: 205, rank:76,
                     small:1033, large:893, recycler:390,
-                    light:4854, heavy:868, cruiser:903,
+                    light:5044, heavy:868, cruiser:903,
                     battleship:750, destroyer:91,
                     bomber:80, traqueur:358
+                },
+                tech: {
+                    weapon:140,
+                    shield:120,
+                    shell :140
                 }
             },
 
@@ -37,6 +47,11 @@ angular
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
@@ -49,6 +64,11 @@ angular
                     light:1406, heavy:197, cruiser:416,
                     battleship:468, destroyer:83,
                     bomber:165, traqueur:160
+                },
+                tech: {
+                   weapon:0,
+                   shield:0,
+                   shell :0
                 }
             },
 
@@ -61,6 +81,11 @@ angular
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
@@ -73,66 +98,96 @@ angular
                     light:0, heavy:0, cruiser:0,
                     battleship:4, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:120,
+                    shield:100,
+                    shell :120
                 }
             },
 
             {name:"Furious Biker",
                 id:"Furious Biker", infuza:"3588159",
-                rank:0, holliday:false,
+                rank:149, holliday:false,
                 fleet: {
-                    size: 0, rank:0,
+                    size: 44, rank:306,
                     small:0, large:0, recycler:0,
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
             {name:"Ashtoonet",
                 id:"Ashtoonet", infuza:"3731479",
-                rank:0, holliday:false,
+                rank:432, holliday:false,
                 fleet: {
-                    size: 0, rank:0,
+                    size: 54, rank:243,
                     small:0, large:0, recycler:0,
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
             {name:"Etwhal",
                 id:"Etwhal", infuza:"3589263",
-                rank:0, holliday:false,
+                rank:95, holliday:false,
                 fleet: {
-                    size: 0, rank:0,
+                    size: 355, rank:39,
                     small:0, large:0, recycler:0,
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
             {name:"bonux44",
                 id:"bonux44", infuza:"4135990",
-                rank:0, holliday:false,
+                rank:210, holliday:false,
                 fleet: {
-                    size: 0, rank:0,
+                    size: 55, rank:233,
                     small:0, large:0, recycler:0,
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             },
 
             {name:"S00999",
                 id:"S00999", infuza:"3753152",
-                rank:0, holliday:false,
+                rank:395, holliday:false,
                 fleet: {
-                    size: 0, rank:0,
+                    size: 47, rank:286,
                     small:0, large:0, recycler:0,
                     light:0, heavy:0, cruiser:0,
                     battleship:0, destroyer:0,
                     bomber:0, traqueur:0
+                },
+                tech: {
+                    weapon:0,
+                    shield:0,
+                    shell :0
                 }
             }
         ];
