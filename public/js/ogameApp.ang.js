@@ -83,9 +83,9 @@ angular
                     bomber:0, traqueur:0
                 },
                 tech: {
-                    weapon:0,
-                    shield:0,
-                    shell :0
+                    weapon:13,
+                    shield:12,
+                    shell :13
                 }
             },
 
