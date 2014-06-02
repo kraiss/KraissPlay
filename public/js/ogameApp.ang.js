@@ -32,9 +32,9 @@ angular
                     bomber:80, traqueur:358
                 },
                 tech: {
-                    weapon:140,
-                    shield:120,
-                    shell :140
+                    weapon:14,
+                    shield:12,
+                    shell :14
                 }
             },
 
@@ -43,10 +43,10 @@ angular
                 rank:180, holliday:false,
                 fleet: {
                     size: 196, rank:78,
-                    small:0, large:0, recycler:0,
-                    light:0, heavy:0, cruiser:0,
-                    battleship:0, destroyer:0,
-                    bomber:0, traqueur:0
+                    small:417, large:188, recycler:383,
+                    light:3213, heavy:90, cruiser:176,
+                    battleship:1403, destroyer:231,
+                    bomber:104, traqueur:344
                 },
                 tech: {
                     weapon:0,
@@ -95,14 +95,14 @@ angular
                 fleet: {
                     size: 84, rank:169,
                     small:1300, large:0, recycler:0,
-                    light:0, heavy:0, cruiser:0,
+                    light:472, heavy:0, cruiser:121,
                     battleship:4, destroyer:0,
                     bomber:0, traqueur:0
                 },
                 tech: {
-                    weapon:120,
-                    shield:100,
-                    shell :120
+                    weapon:12,
+                    shield:10,
+                    shell :12
                 }
             },
 
@@ -185,9 +185,9 @@ angular
                     bomber:0, traqueur:0
                 },
                 tech: {
-                    weapon:0,
-                    shield:0,
-                    shell :0
+                    weapon:8,
+                    shield:8,
+                    shell :10,
                 }
             }
         ];
