@@ -17,3 +17,28 @@
 @footer_margin_resize: -5%;
 @footer_bg_color: darken(@navbar_icon_color, 30%);
 @footer_text_color: @font_color;
+
+/* Less Functions */
+.boxShadow(){
+    box-shadow: -1px 2px 5px 3px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-icon(@image_url){
+    height : 68px;
+	width  : 68px;
+	display: inline-block;
+	background-repeat: no-repeat;
+    background-image:url(@image_url); // assets context
+}
+
+.thin_border(@color: @border_color) {
+    border-radius:@border_radius;
+    border-width: @border_width;
+    border-style: solid;
+    border-color: @color;
+}
+
+/* Less Global Classes */
+.pointer {
+  cursor: pointer;
+}

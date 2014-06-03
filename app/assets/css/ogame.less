@@ -1,4 +1,38 @@
+@import "constants.less";
+
 span.ogameLbl {
   display: inline-block;
   width: 120px;
+}
+
+table {
+        .boxShadow();
+        background-color:@content_bg_color;
+}
+
+tr, td, th {
+    .thin_border(darken(@content_h_color,10%));
+}
+
+tr {
+
+    &.odd {
+        background-color:@content_bg_color;
+    }
+
+    &.even {
+        background-color:darken(@content_bg_color, 5%);
+    }
+}
+
+th {
+    padding: 7px;
+    color: lighten(@content_h_color, 10%);
+
+
+}
+
+td {
+    padding: 3px 10px;
+    color:@content_text_color;
 }

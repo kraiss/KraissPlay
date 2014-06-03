@@ -1,30 +1,6 @@
 @import "constants.less";
 @import "ogame.less";
 
-/* Less Functions */
-.boxShadow(){
-    box-shadow: -1px 2px 5px 3px rgba(0, 0, 0, 0.7);
-}
-
-.navbar-icon(@image_url){
-    height : 68px;
-	width  : 68px;
-	display: inline-block;
-	background-repeat: no-repeat;
-    background-image:url(@image_url); // assets context
-}
-
-.thin_border(@color: @border_color) {
-    border-radius:@border_radius;
-    border-width: @border_width;
-    border-style: solid;
-    border-color: @color;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
 /* div styles (for sticky footer) */
 body, html {
     height: 100%;
@@ -115,7 +91,7 @@ span.navicon {
     &.navicon-plus     {background-position:-68px -204px;}
     &.navicon-bulb     {background-position:-136px -204px;}
     &.navicon-wifi     {background-position:-204px -204px;}
-    &.navicon-minus    {background-position:-272px -204px;}
+    &.navicon-space    {background-position:-272px -204px;}
 }
 
 span.navlang {
