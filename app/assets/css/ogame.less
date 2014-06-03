@@ -11,7 +11,9 @@ table {
 }
 
 tr, td, th {
-    .thin_border(darken(@content_h_color,10%));
+    border-width: 2px;
+    border-style: solid;
+    border-color: darken(@content_h_color,10%);
 }
 
 tr {

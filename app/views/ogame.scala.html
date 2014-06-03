@@ -28,60 +28,52 @@
         <br>
         <h4>Leurs joueurs classé par flotte :</h4>
         <br>
-        <ol>
-            <li ng-repeat="p in player" class="">
-                <span class="ogameLbl">{{p.name}}</span> ({{p.rank}})
-                - <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a>
-                - <a tip="Détail de {{p.name}}" ng-click="switchDetail($index)">Voir Detail<span class="updown-link {{upDownIcon($index)}}" /></a>
-
-                <div ng-show="p.showDetail" style="padding-left:20px">
-                    Points de flotte : {{p.fleet.size}}k
-                    <br>
-                    Classement flotte : {{p.fleet.rank}}
-                    <br>
-                    Techno de combat (Armes, bouclier, coque) : ({{p.tech.weapon}}, {{p.tech.shield}}, {{p.tech.shell}})
-                    <br>
-                    Sa dernière flotte connue
-                    <ul>
-                        <li><span class="ogameLbl">Petit Transp :</span>{{p.fleet.small}}</li>
-                        <li><span class="ogameLbl">Grand Transp :</span>{{p.fleet.large}}</li>
-                        <li><span class="ogameLbl">Chasseur léger :</span>{{p.fleet.light}}</li>
-                        <li><span class="ogameLbl">Chasseur lourd :</span>{{p.fleet.heavy}}</li>
-                        <li><span class="ogameLbl">Croiseurs :</span>{{p.fleet.cruiser}}</li>
-                        <li><span class="ogameLbl">Vaisseau Bat :</span>{{p.fleet.battleship}}</li>
-                        <li><span class="ogameLbl">Recycleur :</span>{{p.fleet.recycler}}</li>
-                        <li><span class="ogameLbl">Bombardier :</span>{{p.fleet.bomber}}</li>
-                        <li><span class="ogameLbl">Destructeur :</span>{{p.fleet.destroyer}}</li>
-                        <li><span class="ogameLbl">Traqueur :</span>{{p.fleet.traqueur}}</li>
-                    </ul>
-                </div>
-            </li>
-        </ol>
-        <br><br>
-
-        Désolé je suis en train de développer ce tableau, le détail ne s'ouvre pas encore dans le tableau
 
         <table class="table table-striped table-bordered table-hover">
             <thead>
-                <tr class="even">
+                <tr class="even text-center">
                     <th></th>
                     <th>Joueur</th>
                     <th>Classement Général</th>
-                    <th>Classement Flotte</th>
-                    <th>Points flotte</th>
+                    <th>Classement Militaire</th>
+                    <th>Points Militaire</th>
                     <th>Lien Infuza</th>
-                    <th>Autres Informations</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="p in player" ng-class-odd="'odd'" ng-class-even="'even'">
-                    <td>{{$index}}</td>
-                    <td>{{p.name}}</td>
-                    <td>{{p.rank}}</td>
-                    <td>{{p.fleet.rank}}</td>
-                    <td>{{p.fleet.size}} k</td>
-                    <td><a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a></td>
-                    <td><a tip="Détail de {{p.name}}" ng-click="switchDetail($index)">Voir Detail<span class="updown-link {{upDownIcon($index)}}" /></a></td>
+                <tr ng-repeat="p in player" class="pointer" ng-click="switchDetail($index)" ng-class-odd="'odd'" ng-class-even="'even'">
+                    <td ng-if="p.showDetail==false">{{$index}}</td>
+                    <td ng-if="p.showDetail==false">{{p.name}}</td>
+                    <td ng-if="p.showDetail==false">{{p.rank}}</td>
+                    <td ng-if="p.showDetail==false">{{p.fleet.rank}}</td>
+                    <td ng-if="p.showDetail==false">{{p.fleet.size}} k</td>
+                    <td ng-if="p.showDetail==false"><a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a></td>
+                    <td ng-if="p.showDetail" colspan="6">
+                        <span class="ogameLbl">{{p.name}}</span> ({{p.rank}})
+                        - <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a>
+
+                        <div ng-show="p.showDetail" style="padding-left:20px">
+                            Points de flotte : {{p.fleet.size}}k
+                            <br>
+                            Classement flotte : {{p.fleet.rank}}
+                            <br>
+                            Techno de combat (Armes, bouclier, coque) : ({{p.tech.weapon}}, {{p.tech.shield}}, {{p.tech.shell}})
+                            <br>
+                            Sa dernière flotte connue
+                            <ul>
+                                <li><span class="ogameLbl">Petit Transp :</span>{{p.fleet.small}}</li>
+                                <li><span class="ogameLbl">Grand Transp :</span>{{p.fleet.large}}</li>
+                                <li><span class="ogameLbl">Chasseur léger :</span>{{p.fleet.light}}</li>
+                                <li><span class="ogameLbl">Chasseur lourd :</span>{{p.fleet.heavy}}</li>
+                                <li><span class="ogameLbl">Croiseurs :</span>{{p.fleet.cruiser}}</li>
+                                <li><span class="ogameLbl">Vaisseau Bat :</span>{{p.fleet.battleship}}</li>
+                                <li><span class="ogameLbl">Recycleur :</span>{{p.fleet.recycler}}</li>
+                                <li><span class="ogameLbl">Bombardier :</span>{{p.fleet.bomber}}</li>
+                                <li><span class="ogameLbl">Destructeur :</span>{{p.fleet.destroyer}}</li>
+                                <li><span class="ogameLbl">Traqueur :</span>{{p.fleet.traqueur}}</li>
+                            </ul>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
