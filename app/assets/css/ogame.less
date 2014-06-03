@@ -1,44 +1,43 @@
 @import "constants.less";
 
+.ogame_table_border() {
+  border-width: 2px;
+  border-style: solid;
+  border-color: darken(@content_h_color,10%);
+}
+
 span.ogameLbl {
   display: inline-block;
   width: 120px;
 }
 
 table {
-        .boxShadow();
-        background-color:@content_bg_color;
-}
+  .boxShadow();
+  background-color:@content_bg_color;
 
-tr, td, th {
-    border-width: 2px;
-    border-style: solid;
-    border-color: darken(@content_h_color,10%);
-}
+  tr {
+    .ogame_table_border();
 
-tr {
+    &.odd {background-color:@content_bg_color;}
+    &.even {background-color:darken(@content_bg_color, 5%);}
+  }
 
-    &.odd {
-        background-color:@content_bg_color;
-    }
+  th {
+    .ogame_table_border();
 
-    &.even {
-        background-color:darken(@content_bg_color, 5%);
-    }
-}
-
-th {
     padding: 7px;
     color: lighten(@content_h_color, 10%);
+  }
 
+  td {
+    .ogame_table_border();
 
-}
-
-td {
     padding: 3px 10px;
     color:@content_text_color;
+  }
 }
 
+/* Animation when open player detail */
 .show-detail-anim {
   animation: show-detail-anim-param 0.8s ease;
   -webkit-animation: show-detail-anim-param 0.8s ease;
