@@ -202,9 +202,15 @@ angular
     }
 
     $scope.switchDetail = function(index) {
-        if ($scope.player[index].showDetail)
+        if ($scope.player[index].showDetail) {
             $scope.player[index].showDetail = false;
-        else
+        } else {
+            var i;
+            for (i = 0; i < $scope.player.length; i++) {
+                $scope.player[i].showDetail = false;
+            }
+
             $scope.player[index].showDetail = true;
+        }
     }
 });
