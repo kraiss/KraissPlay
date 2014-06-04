@@ -49,30 +49,60 @@
                     <td ng-if="p.showDetail==false">{{p.fleet.size}} k</td>
                     <td ng-if="p.showDetail==false"><a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a></td>
                     <td ng-if="p.showDetail" colspan="6" class="show-detail-anim">
-                        <span class="ogameLbl">{{p.name}}</span> ({{p.rank}})
-                        - <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a>
+                        <div class="row">
+                            <span class="ogameLbl col-lg-3 col-md-4 col-xs-11">Nom du Joueur : </span>
+                            <span class="col-lg-8 col-md-7 col-xs-11">{{p.name}}</span>
 
-                        <div ng-show="p.showDetail" style="padding-left:20px">
-                            Points de flotte : {{p.fleet.size}}k
-                            <br>
-                            Classement flotte : {{p.fleet.rank}}
-                            <br>
-                            Techno de combat (Armes, bouclier, coque) : ({{p.tech.weapon}}, {{p.tech.shield}}, {{p.tech.shell}})
-                            <br>
-                            Sa dernière flotte connue
-                            <ul>
-                                <li><span class="ogameLbl">Petit Transp :</span>{{p.fleet.small}}</li>
-                                <li><span class="ogameLbl">Grand Transp :</span>{{p.fleet.large}}</li>
-                                <li><span class="ogameLbl">Chasseur léger :</span>{{p.fleet.light}}</li>
-                                <li><span class="ogameLbl">Chasseur lourd :</span>{{p.fleet.heavy}}</li>
-                                <li><span class="ogameLbl">Croiseurs :</span>{{p.fleet.cruiser}}</li>
-                                <li><span class="ogameLbl">Vaisseau Bat :</span>{{p.fleet.battleship}}</li>
-                                <li><span class="ogameLbl">Recycleur :</span>{{p.fleet.recycler}}</li>
-                                <li><span class="ogameLbl">Bombardier :</span>{{p.fleet.bomber}}</li>
-                                <li><span class="ogameLbl">Destructeur :</span>{{p.fleet.destroyer}}</li>
-                                <li><span class="ogameLbl">Traqueur :</span>{{p.fleet.traqueur}}</li>
-                            </ul>
+                            <span class="ogameLbl col-lg-3 col-md-4 col-xs-11">Place au Classement Général : </span>
+                            <span class="col-lg-8 col-md-7 col-xs-11">{{p.rank}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-4 col-xs-11">Place au Classement Militaire : </span>
+                            <span class="col-lg-8 col-md-7 col-xs-11">{{p.fleet.rank}} (avec {{p.fleet.size}}k points)</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-4 col-xs-11">Armes, Bouclier, Coques : </span>
+                            <span class="col-lg-8 col-md-7 col-xs-11"> {{p.tech.weapon}}, {{p.tech.shield}}, {{p.tech.shell}}</span>
                         </div>
+
+                        <br>
+                        <a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">
+                            Consulter le rapport Infuza de {{p.name}}
+                        </a>
+                        <br><br>
+
+                        <div class="row" style="margin-bottom: 10px;">
+                            <h4 class="ogameLbl col-lg-11 col-md-11 col-xs-11">Dernière Flotte Connue :</h4>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Petit Transp :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.small}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Grand Transp :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.large}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Chasseur léger :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.light}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Chasseur lourd :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.heavy}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Croiseurs :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.cruiser}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Vaisseau Bat :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.battleship}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Recycleur :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.recycler}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Bombardier :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.bomber}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Destructeur :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.destroyer}}</span>
+
+                            <span class="ogameLbl col-lg-3 col-md-3 col-xs-4">Traqueur :</span>
+                            <span class="col-lg-3 col-md-3 col-xs-8">{{p.fleet.traqueur}}</span>
+                        </div>
+
                     </td>
                 </tr>
             </tbody>
