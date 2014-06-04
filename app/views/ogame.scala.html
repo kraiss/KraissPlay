@@ -42,7 +42,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="p in player" class="pointer" ng-click="switchDetail($index)" ng-class-odd="'odd'" ng-class-even="'even'">
-                    <td>{{$index}}</td>
+                    <td>{{$index + 1}}</td>
                     <td ng-if="p.showDetail==false">{{p.name}}</td>
                     <td ng-if="p.showDetail==false">{{p.rank}}</td>
                     <td ng-if="p.showDetail==false">{{p.fleet.rank}}</td>
