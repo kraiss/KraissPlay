@@ -42,13 +42,13 @@
             </thead>
             <tbody>
                 <tr ng-repeat="p in player" class="pointer" ng-click="switchDetail($index)" ng-class-odd="'odd'" ng-class-even="'even'">
-                    <td ng-if="p.showDetail==false">{{$index}}</td>
+                    <td>{{$index}}</td>
                     <td ng-if="p.showDetail==false">{{p.name}}</td>
                     <td ng-if="p.showDetail==false">{{p.rank}}</td>
                     <td ng-if="p.showDetail==false">{{p.fleet.rank}}</td>
                     <td ng-if="p.showDetail==false">{{p.fleet.size}} k</td>
                     <td ng-if="p.showDetail==false"><a tip="Infuza de {{p.name}}" href="http://www.infuza.com/fr/ogame.fr/Ursa/Players/{{p.infuza}}" class="tip">Son Infuza</a></td>
-                    <td ng-if="p.showDetail" colspan="6" class="show-detail-anim">
+                    <td ng-if="p.showDetail" colspan="5" class="show-detail-anim">
                         <div class="row">
                             <span class="ogameLbl col-lg-3 col-md-4 col-xs-11">Nom du Joueur : </span>
                             <span class="col-lg-8 col-md-7 col-xs-11">{{p.name}}</span>
