@@ -5,7 +5,7 @@ The Website on Heroku : [kraissplay.herokuapp.com](http://kraissplay.herokuapp.c
 
 The app is pushed to Heroku by  ![Codeship Status](https://www.codeship.io/projects/d689bbc0-c3e9-0131-fafb-2a0ce8d9c051/status)
 
-----------------------------
+===============
 ### License ###
 [MIT License](http://opensource.org/licenses/MIT) - Copyright (c) 2014 Rassat Pierrick
 
