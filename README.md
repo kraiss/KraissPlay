@@ -8,6 +8,7 @@ The app is pushed to Heroku by Codeship
 ![Codeship Status](https://www.codeship.io/projects/d689bbc0-c3e9-0131-fafb-2a0ce8d9c051/status)
 
 [MIT License](http://opensource.org/licenses/MIT)
+
 Copyright (c) 2014 Rassat Pierrick
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
