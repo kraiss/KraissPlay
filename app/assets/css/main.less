@@ -52,8 +52,13 @@ body, html {
 
 /* Navbar style */
 .navbar {
+    margin-top: -2px;
 	font-size:@navbar_font_size !important;
     .boxShadow();
+
+    .navbar-right {
+      padding-right: 16px;
+    }
 }
 
 .navbar li.active:after {
@@ -96,6 +101,7 @@ span.navicon {
 
 span.navlang {
   .navbar-icon('/assets/img/flags.png');
+  display: inline-block;
 
   &.navlang-fr {background-position:0px 0px;}
   &.navlang-en {background-position:-68px 0px;}
@@ -183,14 +189,11 @@ span.updown-link {
 /* Footer Style */
 .footer {
 	height:@footer_size;
-	margin-left:@footer_margin_resize;
-	margin-right:@footer_margin_resize;
     padding:@footer_padding;
     
 	border-top-left-radius:@border_radius;
 	border-top-right-radius:@border_radius;
     border-width: @border_width;
-	
 	background-color:@footer_bg_color;
 	color:@footer_text_color;
     .boxShadow();
