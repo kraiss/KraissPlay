@@ -33,9 +33,6 @@
                         <a href="/notebook" ng-show="showFR()"><span class="tip navicon navicon-note" title="Bloc Note"></span></a>
                         <a href="/notebook" ng-show="showEN()"><span class="tip navicon navicon-note" title="Notebook"></span></a>
                     </li>
-                    @if(page == "contact") {<li class="active">} else {<li>}
-                        <a href="/contact"><span class="tip navicon navicon-contact" title="Contact"></span></a>
-                    </li>
                     @if(page == "ogame") {<li class="active">} else {<li>}
                         <a href="/ogame"><span class="tip navicon navicon-space" title="Ogame"></span></a>
                     </li>
@@ -67,7 +64,7 @@
             <div class="col-lg-12 col-md-12 col-xs-12">
                 <div class="footer">
                     <a tip="KraissPlay Project" href="https://github.com/kraiss/KraissPlay" class="tip">GitHub KraissPlay Project </a>- Copyright 2014 © Rassat Pierrick - MIT License -
-                    Last Update on 06/06/2014
+                    <a tip="Contact" href="/contact" class="tip">Contact </a>
                 </div>
             </div>
         </div>
