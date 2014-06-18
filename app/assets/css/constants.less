@@ -1,6 +1,6 @@
-@navbar_icon_color: #04AEDA;
 @font_color: #C6DFEE;
 
+@navbar_icon_color: #04AEDA;
 @navbar_font_size: 15px;
 
 @content_padding: 15px;
@@ -37,7 +37,15 @@
     border-color: @color;
 }
 
-/* Less Global Classes */
-.pointer {
-  cursor: pointer;
+/* Content Size Calculation */
+.content_img_size {
+  @media (max-width: 650px) {display: none;}
+  @media (min-width: 650px) and (max-width: 992px) {width: 45%;}
+  @media (min-width: 992px) {width: 25%;}
+}
+
+.content_with_img_size {
+  @media (max-width: 650px) {width: 100%;}
+  @media (min-width: 650px) and (max-width: 992px) {width: 55%;}
+  @media (min-width: 992px) {width: 75%;}
 }

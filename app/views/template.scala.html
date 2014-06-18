@@ -23,7 +23,12 @@
 <div id="wrap">
     <div class="container">
         <div class="navbar navbar-default">
-            <div class="navbar-collapse">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"/>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-left">
                     @if(page == "homepage") {<li class="active">} else {<li>}
                         <a href="/homepage" ng-show="showFR()"><span class="tip navicon navicon-home" title="Accueil"></span></a>
@@ -38,8 +43,8 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li ng-show="showEN()"><a class="pointer" ng-click="changeLang()"><span class="tip navlang navlang-en" title="Voir le site en francais"></span></a></li>
-                    <li ng-show="showFR()"><a class="pointer" ng-click="changeLang()"><span class="tip navlang navlang-fr" title="See the website in English"></span></a></li>
+                    <li ng-show="showEN()"><a class="pointer" ng-click="switchLang()"><span class="tip navlang navlang-en" title="Voir le site en francais"></span></a></li>
+                    <li ng-show="showFR()"><a class="pointer" ng-click="switchLang()"><span class="tip navlang navlang-fr" title="See the website in English"></span></a></li>
                 </ul>
             </div>
         </div>

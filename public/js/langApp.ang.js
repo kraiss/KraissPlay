@@ -11,7 +11,7 @@ angular
     }
     getLang();
 
-    $scope.changeLang = function() {
+    $scope.switchLang = function() {
         $http.put('/lang').success(function(data) {
             lang = data;
         });
