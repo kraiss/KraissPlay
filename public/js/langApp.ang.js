@@ -5,16 +5,16 @@ angular
     lang = "";
 
     getLang = function() {
-    $http.get('/lang/get').success(function(data) {
+    $http.get('/lang').success(function(data) {
         lang = data;
     });
     }
     getLang();
 
     $scope.changeLang = function() {
-    $http.get('/lang/switch').success(function(data) {
-        lang = data;
-    });
+        $http.put('/lang').success(function(data) {
+            lang = data;
+        });
     }
 
     $scope.showFR = function() {

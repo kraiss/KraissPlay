@@ -2,17 +2,17 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.Application.index()
-GET     /homepage                   controllers.Application.homepage()
-GET     /error                      controllers.Application.error()
-GET     /notebook                   controllers.Application.notebook()
-GET     /contact                    controllers.Application.contact()
-GET     /ogame                      controllers.Application.ogame()
+GET         /                      controllers.Application.index()
+GET         /homepage              controllers.Application.homepage()
+GET         /error                 controllers.Application.error()
+GET         /notebook              controllers.Application.notebook()
+GET         /contact               controllers.Application.contact()
+GET         /ogame                 controllers.Application.ogame()
 
-GET     /lang/get                   controllers.Application.getLang()
-GET     /lang/switch                controllers.Application.switchLang()
+GET         /lang                  controllers.Application.getLang()
+PUT         /lang                  controllers.Application.switchLang()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
-GET     /webjars/*file              controllers.WebJarAssets.at(file)
+GET         /assets/*file          controllers.Assets.at(path="/public", file)
+GET         /webjars/*file         controllers.WebJarAssets.at(file)
 
