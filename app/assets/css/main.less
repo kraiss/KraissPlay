@@ -107,23 +107,6 @@ span.navlang {
   &.navlang-en {background-position:-68px 0px;}
 }
 
-span.updown-link {
-  height : 16px;
-  width  : 16px;
-  cursor: pointer;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-image:url('/assets/img/up_down.png');
-  margin-bottom: -3px;
-  margin-left: 4px;
-
-  &.updown-up         {background-position:0px 0px;}
-  &.updown-up:hover   {background-position:0px -16px;}
-
-  &.updown-down       {background-position:-16px 0px;}
-  &.updown-down:hover {background-position:-16px -16px;}
-}
-
 /* Content Style */
 .content {
     text-align: center;
@@ -182,6 +165,27 @@ span.updown-link {
           display: table;
         }
     }
+}
+
+span.updown-link {
+  height : 16px;
+  width  : 16px;
+  cursor: pointer;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image:url('/assets/img/up_down.png');
+  margin-bottom: -3px;
+  margin-left: 4px;
+
+  &.updown-up         {background-position:0px 0px;}
+  &.updown-up:hover   {background-position:0px -16px;}
+
+  &.updown-down       {background-position:-16px 0px;}
+  &.updown-down:hover {background-position:-16px -16px;}
+}
+
+.btn {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer Style */
