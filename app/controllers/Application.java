@@ -12,7 +12,7 @@ public class Application extends Controller {
     private final static String LANG_ATTR="language";
     
     public static Result index() {
-        return ok(views.html.homepage.render("homepage"));
+        return homepage();
     }
     
     public static Result homepage() {
