@@ -1,1 +1,1 @@
-angular.module('kraissApp', ['langApp', 'ogameApp']);
+angular.module('kraissApp', ['langApp', 'ogameApp', 'jlogApp']);

@@ -23,8 +23,8 @@ public class Application extends Controller {
         return ok(views.html.error.render("error"));
     }
     
-    public static Result notebook() {
-        return ok(views.html.notebook.render("notebook"));
+    public static Result jlog() {
+        return ok(views.html.notebook.render("jlog"));
     }
     
     public static Result contact() {

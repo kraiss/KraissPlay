@@ -5,7 +5,7 @@
 GET         /                      controllers.Application.index()
 GET         /homepage              controllers.Application.homepage()
 GET         /error                 controllers.Application.error()
-GET         /notebook              controllers.Application.notebook()
+GET         /jlog                  controllers.Application.jlog()
 GET         /contact               controllers.Application.contact()
 GET         /ogame                 controllers.Application.ogame()
 

@@ -18,6 +18,7 @@
     <script type='text/javascript' src='@routes.Assets.at("js/kraissApp.ang.js")'></script>
     <script type='text/javascript' src='@routes.Assets.at("js/langApp.ang.js")'></script>
     <script type='text/javascript' src='@routes.Assets.at("js/ogameApp.ang.js")'></script>
+    <script type='text/javascript' src='@routes.Assets.at("js/jlogApp.ang.js")'></script>
 </head>
 <body ng-App="kraissApp" ng-controller="LangCtrl" ng-cloak="ng-cloak">
 <div id="wrap">
@@ -34,9 +35,8 @@
                         <a href="/homepage" ng-show="showFR()"><span class="tip navicon navicon-home" title="Accueil"></span></a>
                         <a href="/homepage" ng-show="showEN()"><span class="tip navicon navicon-home" title="Homepage"></span></a>
                     </li>
-                    @if(page == "notebook") {<li class="active">} else {<li>}
-                        <a href="/notebook" ng-show="showFR()"><span class="tip navicon navicon-note" title="Bloc Note"></span></a>
-                        <a href="/notebook" ng-show="showEN()"><span class="tip navicon navicon-note" title="Notebook"></span></a>
+                    @if(page == "jlog") {<li class="active">} else {<li>}
+                        <a href="/jlog"><span class="tip navicon navicon-note" title="Java Blog"></span></a>
                     </li>
                     @if(page == "ogame") {<li class="active">} else {<li>}
                         <a href="/ogame"><span class="tip navicon navicon-space" title="Ogame"></span></a>
