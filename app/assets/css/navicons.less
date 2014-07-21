@@ -1,0 +1,63 @@
+/**
+ * Created by rassat on 21/07/2014.
+ */
+.navbar-icon(@image_url){
+  height : 68px;
+  width  : 68px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image:url(@image_url); // assets context
+}
+
+span.navicon {
+  .navbar-icon('/assets/img/navicons.png');
+
+  &.navicon-home     {background-position:0px 0px;}
+  &.navicon-phone    {background-position:-68px 0px;}
+  &.navicon-video    {background-position:-136px 0px;}
+  &.navicon-previous {background-position:-204px 0px;}
+  &.navicon-send     {background-position:-272px 0px;}
+
+  &.navicon-mail     {background-position:0px -68px;}
+  &.navicon-load     {background-position:-68px -68px;}
+  &.navicon-info     {background-position:-136px -68px;}
+  &.navicon-ask      {background-position:-204px -68px;}
+  &.navicon-search   {background-position:-272px -68px;}
+
+  &.navicon-note     {background-position:0px -136px;}
+  &.navicon-contact  {background-position:-68px -136px;}
+  &.navicon-java     {background-position:-136px -136px;}
+  &.navicon-lock     {background-position:-204px -136px;}
+  &.navicon-mark     {background-position:-272px -136px;}
+
+  &.navicon-camera   {background-position:0px -204px;}
+  &.navicon-plus     {background-position:-68px -204px;}
+  &.navicon-bulb     {background-position:-136px -204px;}
+  &.navicon-wifi     {background-position:-204px -204px;}
+  &.navicon-space    {background-position:-272px -204px;}
+}
+
+span.navlang {
+  .navbar-icon('/assets/img/flags.png');
+  display: inline-block;
+
+  &.navlang-fr {background-position:0px 0px;}
+  &.navlang-en {background-position:-68px 0px;}
+}
+
+span.updown-link {
+  height : 16px;
+  width  : 16px;
+  cursor: pointer;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image:url('/assets/img/up_down.png');
+  margin-bottom: -3px;
+  margin-left: 4px;
+
+  &.updown-up         {background-position:0px 0px;}
+  &.updown-up:hover   {background-position:0px -16px;}
+
+  &.updown-down       {background-position:-16px 0px;}
+  &.updown-down:hover {background-position:-16px -16px;}
+}
