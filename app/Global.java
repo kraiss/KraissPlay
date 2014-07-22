@@ -37,12 +37,7 @@ public class Global extends play.GlobalSettings {
         }
 
         MorphiaObject.morphia = new Morphia();
-        if(heroku) {
-            MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, db, username, password.toCharArray());
-        }
-        else {
-            MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, db);
-        }
+        MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, db, username, password.toCharArray());
         MorphiaObject.datastore.ensureIndexes();
         MorphiaObject.datastore.ensureCaps();
 
