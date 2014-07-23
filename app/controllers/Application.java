@@ -6,11 +6,7 @@ import play.api.i18n.Lang;
 import play.data.Form;
 
 public class Application extends Controller {
-    private final static String DEFAULT_LANG="fr";
-    private final static String LANG_FR="fr";
-    private final static String LANG_EN="en";
-    private final static String LANG_ATTR="language";
-    
+
     public static Result index() {
         return homepage();
     }
@@ -33,26 +29,5 @@ public class Application extends Controller {
     
     public static Result ogame() {
         return ok(views.html.ogame.render("ogame"));
-    }
-    
-    public static Result switchLang() {
-        if (LANG_FR.equals(session(LANG_ATTR))){
-            session(LANG_ATTR, LANG_EN);
-        } else {
-            session(LANG_ATTR, LANG_FR);
-        }
-        
-        changeLang(session(LANG_ATTR));
-        
-        return ok(session(LANG_ATTR));
-    }
-    
-    public static Result getLang() {
-        if (session(LANG_ATTR) == null || session(LANG_ATTR).isEmpty())
-            session(LANG_ATTR, LANG_FR);
-            
-        //play.Logger.debug("Get : Session Lang is "+ session(LANG_ATTR));
-        
-        return ok(session(LANG_ATTR));
     }
 }
