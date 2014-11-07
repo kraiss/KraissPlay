@@ -5,9 +5,11 @@
 GET         /                      controllers.Application.index()
 GET         /homepage              controllers.Application.homepage()
 GET         /error                 controllers.Application.error()
-GET         /jlog                  controllers.Application.jlog()
 GET         /contact               controllers.Application.contact()
 GET         /ogame                 controllers.Application.ogame()
+
+GET         /jlog/articles         controllers.BlogApi.getBlogArticles()
+GET         /jlog                  controllers.Application.jlog()
 
 GET         /lang                  controllers.LangApi.getLang()
 PUT         /lang                  controllers.LangApi.switchLang()

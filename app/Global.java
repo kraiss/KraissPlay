@@ -1,5 +1,6 @@
 import com.google.code.morphia.Morphia;
 import com.mongodb.Mongo;
+import models.BlogItem;
 import play.api.mvc.RequestHeader;
 import play.api.mvc.SimpleResult;
 import play.libs.F.Promise;
@@ -40,6 +41,8 @@ public class Global extends play.GlobalSettings {
         MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, db, username, password.toCharArray());
         MorphiaObject.datastore.ensureIndexes();
         MorphiaObject.datastore.ensureCaps();
+
+        MorphiaObject.morphia.map(BlogItem.class);
 
         Logger.debug("** Morphia datastore: " + MorphiaObject.datastore.getDB());
     }

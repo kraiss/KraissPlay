@@ -2,6 +2,7 @@ package services;
 
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.Morphia;
+import com.google.code.morphia.annotations.Entity;
 import com.mongodb.Mongo;
 
 /**

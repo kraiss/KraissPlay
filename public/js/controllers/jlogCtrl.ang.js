@@ -1,16 +1,21 @@
 angular
     .module('jlogApp', [])
-    .controller('jlogCtrl', function ($scope) {
+    .controller('jlogCtrl', ['$http', '$scope', '$sce', function($http, $scope, $sce) {
 
-        $scope.articles =
-            [
-                {
-                    title: {fr: "Constructeur dynamique" ,en:"Dynamic Constructor"},
-                    article: {
-                        fr: "C'est un test <a href='#'>link</a>",
-                        en :"<html><head></head><body>C'est un test <a href='#'>link</a></body></html>"
-                    },
-                    image:null
-                }
-            ];
-    });
+        var articlesURL = 'http://' + window.document.URL.split('/')[2] + '/jlog/articles ';
+
+        // JLog articles
+        $scope.articles = [];
+
+        $http.get(articlesURL)
+            .success(function(data, status, headers, config) {
+                $scope.articles = data;
+                angular.forEach($scope.articles, function(article) {
+                    article.textFr = $sce.trustAsHtml(article.textFr);
+                    article.textEn = $sce.trustAsHtml(article.textEn);
+                });
+            })
+            .error(function(data, status, headers, config) {
+                $scope.articles = [];
+            });
+    }]);

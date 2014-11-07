@@ -5,24 +5,21 @@
     <div ng-controller="jlogCtrl">
         <article ng-repeat="a in articles">
 
-            <h2 ng-show="showEN()" class="article-title">{{a.title.en}}</h2>
-            <h2 ng-show="showFR()" class="article-title">{{a.title.fr}}</h2>
-
-
+            <h2 ng-show="showEN()" class="article-title">{{a.titleEn}}</h2>
             <div ng-show="showEN()" ng-class="a.image == null ? 'article-content' : 'article-content-withimage'">
-                <p><iframe>{{a.article.en}}</iframe></p>
+                <p ng-bind-html="a.textEn"></p>
             </div>
 
+            <h2 ng-show="showFR()" class="article-title">{{a.titleFr}}</h2>
             <div ng-show="showFR()" ng-class="a.image == null ? 'article-content' : 'article-content-withimage'">
-                <p>{{a.article.fr}}</p>
+                <p ng-bind-html="a.textFr"></p>
             </div>
 
-            <div ng-if="a.image != null" class="article-image">
-                <img class="image-border" alt="" src='{{a.image}}' />
+            <div ng-if="a.image" class="article-image">
+                @*<img class="image-border" alt="" src="{{a.image}}" />*@
             </div>
 
             <span class="clear-image-layout" />
         </article>
     </div>
-
 }
